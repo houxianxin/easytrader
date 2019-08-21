@@ -426,3 +426,9 @@ class BaseLoginClientTrader(ClientTrader):
             comm_password,
             **kwargs
         )
+
+
+class THSClientTrader(BaseLoginClientTrader):
+
+    def login(self, user, password, exe_path, comm_password=None, **kwargs):
+        self.connect(exe_path=exe_path)

@@ -131,5 +131,14 @@ def get_exit():
     return jsonify({"msg": "exit success"}), 200
 
 
+@app.route("/refresh", methods=["GET"])
+@error_handle
+def refresh():
+    user = global_store["user"]
+    user.refresh()
+
+    return jsonify({"msg": "refresh success"}), 200
+
+
 def run(port=1430):
     app.run(host="0.0.0.0", port=port)

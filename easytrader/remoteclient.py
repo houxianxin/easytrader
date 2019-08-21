@@ -105,3 +105,6 @@ class RemoteClient:
         if response.status_code >= 300:
             raise Exception(response.json()["error"])
         return response.json()
+
+    def refresh(self):
+        return self.common_get("refresh")

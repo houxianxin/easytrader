@@ -43,9 +43,9 @@ def use(broker, debug=True, **kwargs):
 
         return GJClientTrader()
     if broker.lower() in ["ths", "同花顺客户端"]:
-        from .clienttrader import ClientTrader
+        from .clienttrader import THSClientTrader
 
-        return ClientTrader()
+        return THSClientTrader()
 
     raise NotImplementedError
 
