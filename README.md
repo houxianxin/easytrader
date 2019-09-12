@@ -54,3 +54,10 @@
 ### 其他
 
 [软件实现原理](http://www.jisilu.cn/question/42707)
+
+### easytraderR分支扩展
+
+```shell
+python setup.py sdist
+pip install easytrader -f ./dist/easytrader-0.18.4.post1.tar.gz --no-cache-dir
+```
